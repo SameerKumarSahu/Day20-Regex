@@ -2,6 +2,7 @@ import java.util.regex.Pattern;
 
 public class MailTest {
     public static void main(String[] args) {
+        System.out.println("Welcome to the User registration program..");
         MailTest user = new MailTest();
         user.checkMail("abc@yahoo.com");
         user.checkMail("abc-100@yahoo.com");
@@ -12,6 +13,15 @@ public class MailTest {
         user.checkMail("abc@1.com");
         user.checkMail("abc@gmail.com.com");
         user.checkMail("abc+100@gmail.com.com");
+
+        user.checkMail("abc@1.co.in");
+        user.checkMail("abc123@.com");
+        user.checkMail("abc123@.com.com");
+        user.checkMail("abc()*@gmail.com");
+        user.checkMail("abc@%*.com");
+        user.checkMail("abc@abc@gmail.com");
+        user.checkMail("abc@gmail.com.1a");
+        
     }
 
     public void checkMail(String eMail) {
@@ -19,6 +29,6 @@ public class MailTest {
         if (check)
             System.out.println("Email address Matched");
         else
-            System.out.println("Please Enter a Valid mail address e.g example.abc@bl.co.in");
+            System.out.println("Please Enter a Valid mail address e.g example.abc.100@abc.com.au");
     }
 }
